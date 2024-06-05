@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Színek</title>
+        <style>
+            body{
+                background-color: #CCC;
+                font-family: Arial Arial, Helvetica, sans-serif;
+            }
+            label{
+                font-size: 0.8em;
+                color: #333;
+            }
+            input[type=text]{
+                border: 1px solid #999;
+                padding: 5px;
+            }
+            div{
+                width: 120px;
+                height: 120px;
+                background-color: rgb(97, 208, 97);
+                border: 1px solid #666;
+                box-shadow: 0 0 3px #747;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Színek</h1>
+        <p>
+            <label for="bgcolor">Háttérszín</label><br>
+            <input type="text" id="bgcolor"><br><br>
+        </p>
+        <div id="forog">
+            
+        </div>
+
+        <script>
+            bgcolor.addEventListener("keydown", function(e){
+                if(e.key === "Enter"){
+                    document.body.style.backgroundColor = this.value;
+                    this.value = "";
+                }
+            });
+
+
+            forog.addEventListener("mouseover", function(){
+                this.style.transform = "rotate(120deg)";
+
+            });
+
+            forog.addEventListener("mouseout", function(){
+                this.style.transform = "rotate(0deg)" ;
+            });
+        </script>
+    </body>
+</html>
